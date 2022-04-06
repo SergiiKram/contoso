@@ -1,0 +1,16 @@
+version: '3.4'
+
+services:
+  contoso.api:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ConnectionStrings__DefaultConnection=Server=contoso.db;Database=Contoso;User=sa;Password=Your_password123;
+    ports:
+      - "80"
+
+  contoso.db:
+    environment:
+      - SA_PASSWORD=Your_password123
+      - ACCEPT_EULA=Y
+    ports:
+     - "1433"

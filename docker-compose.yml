@@ -1,0 +1,11 @@
+version: '3.4'
+
+services:
+  contoso.api:
+    image: ${DOCKER_REGISTRY-}contosoapi
+    build:
+      context: .
+      dockerfile: Contoso.API/Dockerfile
+
+  contoso.db:
+    image: mcr.microsoft.com/mssql/server
