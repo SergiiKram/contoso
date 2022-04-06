@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.32228.343
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Contoso.API", "Contoso.API\Contoso.API.csproj", "{8338451C-AE18-4D12-9536-7F38BCEBD6BB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Contoso.API", "Contoso.API\Contoso.API.csproj", "{8338451C-AE18-4D12-9536-7F38BCEBD6BB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Contoso.Tests", "Contoso.Tests\Contoso.Tests.csproj", "{B8EF82C6-6AE0-4888-A0E5-53D984507899}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{8338451C-AE18-4D12-9536-7F38BCEBD6BB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8338451C-AE18-4D12-9536-7F38BCEBD6BB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8338451C-AE18-4D12-9536-7F38BCEBD6BB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B8EF82C6-6AE0-4888-A0E5-53D984507899}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B8EF82C6-6AE0-4888-A0E5-53D984507899}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B8EF82C6-6AE0-4888-A0E5-53D984507899}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B8EF82C6-6AE0-4888-A0E5-53D984507899}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
