@@ -17,7 +17,7 @@ namespace Contoso.Tests
         }
 
         [Fact]
-        public async Task Contoso_successeeds()
+        public async Task Contoso_succeeds()
         {
             var client = _factory.CreateClient();
 
