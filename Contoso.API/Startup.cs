@@ -28,7 +28,7 @@ namespace Contoso.API
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddDbContext<ContosoContext>(options =>
-                options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
+                options.UseNpgsql(Configuration.GetConnectionString("DefaultConnection")));
 
             services.AddControllers();
             services.AddSwaggerGen(c =>
