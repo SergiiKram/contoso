@@ -4,13 +4,22 @@ services:
   contoso.api:
     environment:
       - ASPNETCORE_ENVIRONMENT=Development
-      - ConnectionStrings__DefaultConnection=Server=contoso.db;Database=Contoso;User=sa;Password=Your_password123;
+      - ConnectionStrings__DefaultConnection=Host=contoso.db;Database=Contoso;Username=postgres;Password=Your_password123;
     ports:
-      - "80"
+      - "8080:8080"
+    depends_on:
+      contoso.db:
+        condition: service_healthy
 
   contoso.db:
     environment:
-      - SA_PASSWORD=Your_password123
-      - ACCEPT_EULA=Y
+      - POSTGRES_PASSWORD=Your_password123
+      - POSTGRES_DB=Contoso
+      - POSTGRES_USER=postgres
     ports:
-     - "1433"
+      - "5432:5432"
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres"]
+      interval: 5s
+      timeout: 5s
+      retries: 10

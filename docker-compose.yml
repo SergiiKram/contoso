@@ -8,4 +8,4 @@ services:
       dockerfile: Contoso.API/Dockerfile
 
   contoso.db:
-    image: mcr.microsoft.com/mssql/server
+    image: postgres
